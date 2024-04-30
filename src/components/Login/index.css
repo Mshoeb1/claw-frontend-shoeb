@@ -1,0 +1,344 @@
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin: auto;
+  background-size: cover;
+  background-image: url("https://res.cloudinary.com/dwekbzmuw/image/upload/v1714289075/main_bg_msdpyb.jpg");
+}
+
+.login-body-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  width: 60%;
+  box-shadow: 0px 8px 40px rgba(16, 12, 12, 0.885);
+}
+
+.login-first-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-image: url("https://res.cloudinary.com/dwekbzmuw/image/upload/v1714293310/main_bg_oc3t3s.jpg");
+  height: 100%;
+  width: 50%;
+  background-size: cover;
+}
+
+.login-image-container {
+  margin-bottom: auto;
+}
+
+.login-para {
+  color: #ffffff;
+  font-size: 18px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.login-heading {
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.span-heading {
+  font-size: 50px;
+  color: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: flex-start;
+}
+
+.icon {
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.follow-para {
+  color: #ffffff;
+  margin-right: 15px;
+}
+
+.check-box-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.check-sub-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.check-box {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.check-box:hover {
+  border: 1px solid blue;
+  outline: none;
+}
+
+.forgot-para {
+  color: black;
+}
+
+.forgot-para:hover {
+  color: Blue;
+  text-decoration: underline;
+}
+
+.footer {
+  background-image: linear-gradient(
+    90deg,
+    rgba(63, 174, 240, 1) 0%,
+    rgba(20, 111, 219, 1) 35%,
+    rgba(0, 255, 248, 1) 100%
+  );
+  width: 100%;
+  padding: 15px;
+  margin: 0px;
+  margin-top: auto;
+  color: #ffffff;
+  font-family: Helvetica;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+  .login-form-container {
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-image: url("https://res.cloudinary.com/dwekbzmuw/image/upload/v1714289075/main_bg_msdpyb.jpg");
+  }
+}
+
+.login-website-logo-desktop-img {
+  width: 185px;
+}
+
+@media screen and (max-width: 991px) {
+  .login-website-logo-desktop-img {
+    display: none;
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  height: 100%;
+  width: 50%;
+}
+
+@media screen and (min-width: 992px) {
+  .form-container {
+    width: 50%;
+    height: 100%;
+    flex-shrink: 0;
+    padding-top: 30px;
+    background-color: #ffffff;
+  }
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 80%;
+}
+
+.input-label {
+  margin-bottom: 0px;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  color: #475569;
+}
+
+.username-input-field {
+  font-size: 14px;
+  height: 40px;
+  border: 1px solid #a8adac;
+  border-left: 5px solid #07f7ef;
+  background-color: transparent;
+  color: #64748b;
+  border-radius: 2px;
+  margin-top: 5px;
+  padding: 8px 16px 8px 16px;
+  outline: none;
+}
+
+.username-input-field:hover {
+  border: 1px solid #19faaf;
+  border-left: 5px solid #07f7ef;
+}
+
+.password-input-field {
+  font-size: 14px;
+  height: 40px;
+  border: 1px solid #a8adac;
+  border-left: 5px solid #07f7ef;
+  background-color: transparent;
+  color: #64748b;
+  border-radius: 2px;
+  margin-top: 5px;
+  padding: 8px 16px 8px 16px;
+  outline: none;
+}
+
+.password-input-field:hover {
+  border: 1px solid #19faaf;
+  border-left: 5px solid #07f7ef;
+}
+
+.login-button {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffffff;
+  height: 40px;
+  width: 40%;
+  margin-top: 20px;
+  margin-bottom: 2px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(63, 174, 240, 1) 0%,
+    rgba(20, 111, 219, 1) 35%,
+    rgba(0, 255, 248, 1) 100%
+  );
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.error-message {
+  align-self: start;
+  font-size: 12px;
+  margin-top: 3px;
+  margin-bottom: 0px;
+  font-family: "Roboto";
+  font-size: 12px;
+  line-height: 16px;
+  color: #ff0b37;
+}
+
+.account-span {
+  font-size: 13px;
+  color: #4260f5;
+  font-weight: 700;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+  .login-button {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 12px;
+    color: #ffffff;
+    height: 40px;
+    background-image: linear-gradient(
+      90deg,
+      rgba(63, 174, 240, 1) 0%,
+      rgba(20, 111, 219, 1) 35%,
+      rgba(0, 255, 248, 1) 100%
+    );
+    width: 70%;
+    margin-top: 20px;
+    margin-bottom: 2px;
+    background-color: #48faf4;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .icon {
+    color: #ffffff;
+    margin-right: 7px;
+    height: 13px;
+    width: 13px;
+  }
+
+  .span-heading {
+    font-size: 25px;
+  }
+
+  .login-heading {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .login-para {
+    color: #ffffff;
+    font-size: 15px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+
+  .check-box {
+    height: 14px;
+    width: 14px;
+    margin-right: 10px;
+  }
+
+  .check-box:hover {
+    border: 1px solid blue;
+    outline: none;
+  }
+
+  .forgot-para {
+    color: black;
+    font-size: 13px;
+  }
+
+  .forgot-para:hover {
+    color: Blue;
+    text-decoration: underline;
+  }
+
+  .follow-para {
+    color: #ffffff;
+    margin-right: 10px;
+    font-size: 12px;
+  }
+
+  .Check-label {
+    font-size: 12px;
+  }
+
+  .account-span {
+    font-size: 12px;
+    width: 80%;
+  }
+}
