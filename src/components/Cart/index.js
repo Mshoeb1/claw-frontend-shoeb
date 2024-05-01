@@ -1,5 +1,5 @@
 import CartContext from "../../context/CartContext";
-
+import Footer from "../Footer";
 import Header from "../Header";
 import EmptyCartView from "../EmptyCartView";
 import CartListView from "../CartListView";
@@ -37,6 +37,7 @@ const Cart = () => (
               </div>
             )}
           </div>
+          <Footer />
         </>
       );
     }}

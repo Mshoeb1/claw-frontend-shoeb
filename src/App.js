@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import Products from "./components/Products";
 import ProductItemDetails from "./components/ProductItemDetails";
 import Cart from "./components/Cart";
+import PaymentPage from "./components/PaymentPage";
 import NotFound from "./components/NotFound";
 import ProtectedRoute from "./components/ProtectedRoute";
 import CartContext from "./context/CartContext";
@@ -107,6 +108,7 @@ class App extends Component {
           <Route exact path="/register" component={signUp} />
           <ProtectedRoute exact path="/" component={Home} />
           <ProtectedRoute exact path="/products" component={Products} />
+          <ProtectedRoute exact path="/payment" component={PaymentPage} />
           <ProtectedRoute
             exact
             path="/products/:id"

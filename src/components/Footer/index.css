@@ -1,0 +1,71 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  padding: 10px;
+  background-image: url("https://res.cloudinary.com/dwekbzmuw/image/upload/v1714385767/nav_image_copy_oosjkm.jpg");
+}
+
+.footer-icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.icon {
+  color: white;
+  height: 20px;
+  width: 20px;
+  margin-right: 20px;
+}
+
+.icon:hover {
+  color: #02f7cf;
+}
+
+.footer-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  font-size: 17px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin: 0px;
+}
+
+.icon-copy {
+  color: white;
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .icon-copy {
+    color: white;
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .footer-heading {
+    font-size: 15px;
+  }
+
+  .icon {
+    color: white;
+    height: 17px;
+    width: 17px;
+    margin-right: 20px;
+  }
+}

@@ -1,5 +1,6 @@
 import { Link, withRouter } from "react-router-dom";
 import Cookies from "js-cookie";
+import { MdOutlineLogout } from "react-icons/md";
 
 import CartContext from "../../context/CartContext";
 
@@ -37,7 +38,7 @@ const Header = (props) => {
           <Link to="/">
             <img
               className="website-logo"
-              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+              src="https://res.cloudinary.com/dwekbzmuw/image/upload/v1714565548/Gen-Z_Trends-removebg-preview_gbw3gn.png"
               alt="website logo"
             />
           </Link>
@@ -47,11 +48,7 @@ const Header = (props) => {
             className="nav-mobile-btn"
             onClick={onClickLogout}
           >
-            <img
-              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-log-out-img.png"
-              alt="nav logout"
-              className="nav-bar-img"
-            />
+            <MdOutlineLogout className="nav-bar-img" />
           </button>
         </div>
 
@@ -59,7 +56,7 @@ const Header = (props) => {
           <Link to="/">
             <img
               className="website-logo"
-              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-logo-img.png"
+              src="https://res.cloudinary.com/dwekbzmuw/image/upload/v1714565548/Gen-Z_Trends-removebg-preview_gbw3gn.png"
               alt="website logo"
             />
           </Link>
