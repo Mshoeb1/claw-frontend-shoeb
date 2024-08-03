@@ -6,7 +6,7 @@ import "./index.css";
 
 class Login extends Component {
   state = {
-    email: "",
+    username: "",
     password: "",
     showSubmitError: false,
     errorMsg: "",
@@ -14,7 +14,7 @@ class Login extends Component {
   };
 
   onChangeEmail = (event) => {
-    this.setState({ email: event.target.value });
+    this.setState({ username: event.target.value });
   };
 
   onChangePassword = (event) => {
@@ -23,7 +23,6 @@ class Login extends Component {
 
   onSubmitSuccess = (jwtToken) => {
     const { history } = this.props;
-    console.log(jwtToken);
     Cookies.set("jwt_token", jwtToken, {
       expires: 30,
     });
@@ -39,14 +38,14 @@ class Login extends Component {
 
   submitForm = async (event) => {
     event.preventDefault();
-    const { email, password } = this.state;
-    const userDetails = { email, password };
-    const url = "https://final-database.onrender.com/login";
+    const { username, password } = this.state;
+    const userDetails = { username, password };
+    const url = "http://localhost:4002/login";
     const options = {
       method: "POST",
       mode: "cors",
       headers: {
-        "Access-Control-Allow-Origin": "https://final-database.onrender.com",
+        "Access-Control-Allow-Origin": "http://localhost:4002",
         "Access-Control-Allow-Credentials": true,
         "Content-Type": "application/json",
         Accept: "application/json",
@@ -60,6 +59,7 @@ class Login extends Component {
 
     if (response.ok === true) {
       console.log(data);
+      localStorage.setItem("user_id", data.id);
       this.onSubmitSuccess(data.jwt_token);
     } else {
       console.log(data);
@@ -88,7 +88,7 @@ class Login extends Component {
   };
 
   renderEmailField = () => {
-    const { email } = this.state;
+    const { username } = this.state;
 
     return (
       <>
@@ -99,7 +99,7 @@ class Login extends Component {
           type="text"
           id="username"
           className="username-input-field"
-          value={email}
+          value={username}
           onChange={this.onChangeEmail}
           placeholder="Email"
         />
@@ -167,11 +167,7 @@ class Login extends Component {
             </div>
           </div>
           <form className="form-container" onSubmit={this.submitForm}>
-            <img
-              src="https://res.cloudinary.com/dwekbzmuw/image/upload/v1714565931/Gen-Z_Trends__1_-removebg-preview_pbddjq.png"
-              className="login-website-logo-desktop-img"
-              alt="website logo"
-            />
+            <h1>Login</h1>
             <div className="input-container">{this.renderEmailField()}</div>
             <div className="input-container">{this.renderPasswordField()}</div>
             <div className="check-box-container">

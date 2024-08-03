@@ -16,6 +16,12 @@
   }
 }
 
+.todo-icon {
+  height: 30px;
+  width: 50px;
+  color: white;
+}
+
 .nav-content {
   display: flex;
   align-items: center;

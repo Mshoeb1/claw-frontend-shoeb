@@ -7,8 +7,6 @@ class Login extends Component {
   state = {
     username: "",
     password: "",
-    email: "",
-    mobile: "",
     showSubmitError: false,
     errorMsg: "",
     isSignUpIn: false,
@@ -20,14 +18,6 @@ class Login extends Component {
 
   onChangePassword = (event) => {
     this.setState({ password: event.target.value });
-  };
-
-  onChangeEmail = (event) => {
-    this.setState({ email: event.target.value });
-  };
-
-  onChangeMobile = (event) => {
-    this.setState({ mobile: event.target.value });
   };
 
   onSubmitSuccess = (jwtToken) => {
@@ -44,16 +34,15 @@ class Login extends Component {
     event.preventDefault();
     const { username, email, password, mobile } = this.state;
     const userDetails = { username, email, password, mobile };
-    const url = "https://final-database.onrender.com/register";
+    const url = "http://localhost:4002/register";
     const options = {
       method: "POST",
       mode: "cors",
       headers: {
-        "Access-Control-Allow-Origin": "https://final-database.onrender.com",
+        "Access-Control-Allow-Origin": "http://localhost:4002",
         "Access-Control-Allow-Credentials": true,
         "Content-Type": "application/json",
         Accept: "application/json",
-        Authorization: "Bearer ACCESS-TOKEN",
       },
       body: JSON.stringify(userDetails),
     };
@@ -89,26 +78,6 @@ class Login extends Component {
     );
   };
 
-  renderEmailField = () => {
-    const { email } = this.state;
-
-    return (
-      <>
-        <label className="input-label" htmlFor="email">
-          Email
-        </label>
-        <input
-          type="text"
-          id="email"
-          className="password-input-field"
-          value={email}
-          onChange={this.onChangeEmail}
-          placeholder="Email"
-        />
-      </>
-    );
-  };
-
   renderUsernameField = () => {
     const { username } = this.state;
 
@@ -124,26 +93,6 @@ class Login extends Component {
           value={username}
           onChange={this.onChangeUsername}
           placeholder="Username"
-        />
-      </>
-    );
-  };
-
-  renderMobileField = () => {
-    const { mobile } = this.state;
-
-    return (
-      <>
-        <label className="input-label" htmlFor="mobile">
-          Mobile
-        </label>
-        <input
-          type="text"
-          id="mobile"
-          className="username-input-field"
-          value={mobile}
-          onChange={this.onChangeMobile}
-          placeholder="Mobile Number"
         />
       </>
     );
@@ -208,15 +157,9 @@ class Login extends Component {
             </div>
           </div>
           <form className="form-container" onSubmit={this.submitForm}>
-            <img
-              src="https://res.cloudinary.com/dwekbzmuw/image/upload/v1714565931/Gen-Z_Trends__1_-removebg-preview_pbddjq.png"
-              className="login-website-logo-desktop-img"
-              alt="website logo"
-            />
+            <h1>Sign Up</h1>
             <div className="input-container">{this.renderUsernameField()}</div>
-            <div className="input-container">{this.renderEmailField()}</div>
             <div className="input-container">{this.renderPasswordField()}</div>
-            <div className="input-container">{this.renderMobileField()}</div>
             <button type="submit" className="login-button">
               SIGN UP
             </button>
